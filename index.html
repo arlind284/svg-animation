@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bee Animation</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: rgb(231, 231, 231);
+        }
+
+        body {
+            text-align: center;
+        }
+
+        #right_wing {
+            animation: upAndDownsRight 1s ease-in-out infinite alternate;
+            transform-origin: bottom;
+        }
+
+        #left_wing {
+            animation: upAndDownsLeft 1s ease-in-out infinite alternate;
+            transform-origin: bottom;
+        }
+
+        #bee_body {
+            animation: shrink 1s ease-in-out infinite alternate;
+            transform-origin: center;
+        }
+
+        #eye_cover {
+            animation: shrinkEye 1s ease-in-out infinite alternate;
+            transform-origin: bottom;
+        }
+
+        /* #bee {
+            animation: upAndDown 1s ease-in-out infinite alternate;
+            transform-origin: center;
+            transform-box: fil-box;
+        } */
+
+        @keyframes shrink {
+            from {
+                transform: rotateX(0deg);
+            }
+
+            to {
+                transform: rotateX(20deg);
+            }
+        }
+
+        @keyframes shrinkEye {
+            from {
+                transform: rotateX(0deg);
+            }
+
+            to {
+                transform: rotateX(32.5deg);
+            }
+        }
+
+        @keyframes upAndDown {
+            from {
+                transform: translateY(0deg);
+            }
+
+            to {
+                transform: translateY(30deg);
+            }
+        }
+
+        @keyframes upAndDownsRight {
+            from {
+                transform: rotateX(0deg);
+                transform: rotateZ(0deg);
+            }
+
+            to {
+                transform: rotateX(20deg);
+                transform: rotateZ(2deg);
+            }
+        }
+
+        @keyframes upAndDownsLeft {
+            from {
+                transform: rotateX(0deg);
+                transform: rotateZ(0deg);
+            }
+
+            to {
+                transform: rotateX(20deg);
+                transform: rotateZ(-2deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <svg width="320" height="320" viewBox="0 0 1064 1064" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="bee-01 1">
+            <g id="left_wing">
+                <path id="Vector"
+                    d="M497.55 417C471.55 451.84 423.45 476.23 374.93 471.1C320.12 465.31 288.1 424.34 266.24 396.38C250.72 376.52 208.47 315.82 218.08 238.92C220.43 220.05 224.33 191.81 245.87 165.43C281.57 121.69 335.76 119.84 341.58 119.74C392.89 118.82 427.89 150.65 443.47 164.82C507.41 223 553 342.89 497.55 417Z"
+                    fill="#91B7C9" />
+            </g>
+            <g id="right_wing">
+                <path id="Vector_2"
+                    d="M764.46 272C763.21 367.37 684.54 444.66 590.46 444.56C498.07 444.45 420.4 369.77 416.92 276.2C419.86 232.8 429.16 190.6 446.03 155.34C472.03 100.86 516.17 63 582.73 63.02C676 63.08 754.89 153 764.46 272Z"
+                    fill="#AED2E3" />
+            </g>
+            <g id="bee_body">
+                <path id="Vector_3"
+                    d="M245.7 773.43C171.99 736.86 100.7 688.3 92.7 679.23C84.06 669.35 86.53 660.71 91.47 654.53C96.41 648.35 116.17 631.07 116.17 631.07L220.56 537.8C204.176 617.044 212.966 699.427 245.7 773.43Z"
+                    fill="#EDF0A7" />
+                <path id="Vector_4"
+                    d="M475.44 981.85C372.84 948 289.39 871.61 245.7 773.43C207.624 687.989 201.921 591.618 229.654 502.283C257.387 412.948 316.663 336.748 396.43 287.89C396 289.2 371.2 363.78 365.66 481C359.57 610 376.79 790.53 475.44 981.85Z"
+                    fill="#F08A5D" />
+                <path id="Vector_5"
+                    d="M750.19 967.83C701.308 989.753 648.333 1001.06 594.76 1001C592.093 1001 589.427 1000.97 586.76 1000.91C513.09 794 486.56 606.8 478.49 471C476.23 433.09 475.43 399.17 475.43 370C475.43 293.74 481.01 249.48 481.01 249.48C484.5 248.39 488.01 247.34 491.55 246.36C544.762 231.456 600.57 228.246 655.14 236.95C655.14 236.95 633.23 334.19 649 510.34C659.57 628.94 687.25 783.31 750.19 967.83Z"
+                    fill="#F08A5D" />
+                <path id="Vector_6"
+                    d="M586.81 1000.87C548.946 1000.13 511.406 993.73 475.44 981.87C376.79 790.53 359.57 610 365.66 481C371.2 363.78 396 289.2 396.43 287.89C403.097 283.803 409.917 279.917 416.89 276.23C437.396 265.365 458.856 256.404 481 249.46C481 249.46 475.43 293.72 475.42 369.98C475.42 399.19 476.22 433.11 478.48 470.98C486.56 606.8 513.09 794 586.81 1000.87Z"
+                    fill="#EDF0A7" />
+                <path id="Vector_7"
+                    d="M764.46 272C730.02 254.803 693.155 242.97 655.14 236.91C655.14 236.91 633.23 334.19 649 510.34C659.59 628.94 687.27 783.34 750.21 967.83C816.587 937.855 873.114 889.689 913.243 828.911C953.372 768.132 975.462 697.229 976.953 624.413C978.444 551.597 959.276 479.848 921.669 417.478C884.062 355.107 829.554 304.667 764.46 272ZM823.86 554.5C793.5 554.5 768.86 527.5 768.86 494.28C768.86 461.06 793.46 434.06 823.86 434.06C854.26 434.06 878.86 461.06 878.86 494.28C878.86 527.5 854.21 554.52 823.86 554.52V554.5Z"
+                    fill="#EDF0A7" />
+                <path id="Vector_8"
+                    d="M823.86 554.52C854.214 554.52 878.82 527.559 878.82 494.3C878.82 461.041 854.214 434.08 823.86 434.08C793.506 434.08 768.9 461.041 768.9 494.3C768.9 527.559 793.506 554.52 823.86 554.52Z"
+                    fill="#F08A5D" />
+            </g>
+            <g id="eye_cover">
+                <path id="Vector_9"
+                    d="M824 324C854.376 324 879 348.624 879 379C879 409.376 854.376 434 824 434C793.624 434 769 409.376 769 379C769 348.624 793.624 324 824 324Z"
+                    fill="#EDF0A7" />
+            </g>
+        </g>
+    </svg>
+
+
+</body>
+
+</html>
